@@ -1,5 +1,8 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
-# Step 1: Sync all static files to GCS bucket
+# Sync static site files to GCS bucket
 - name: 'gcr.io/cloud-builders/gsutil'
   args:
     - '-m'
