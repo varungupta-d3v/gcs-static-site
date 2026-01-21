@@ -1,0 +1,10 @@
+steps:
+# Step 1: Sync all static files to GCS bucket
+- name: 'gcr.io/cloud-builders/gsutil'
+  args:
+    - '-m'
+    - 'rsync'
+    - '-r'
+    - '-d'
+    - '.'
+    - 'gs://varun-static-site-484410'
